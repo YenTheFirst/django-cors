@@ -28,10 +28,13 @@ To allow requests to be made from the browser from cross domains, use ``AllowOri
 and then set ALLOWED_CROSS_DOMAIN_ORIGINS::
 
     #all_origins
-    ALLOWED_CROSS_DOMAIN_ORIGINS = ['*']
+    ALLOWED_CROSS_DOMAIN_ORIGINS = '*'
 
     #just two subdomains of example.com
     ALLOWED_CROSS_DOMAIN_ORIGINS = [
         'http://subdomain1.example.com',
         'http://subdomain2.exapmle.com',
     ]
+
+    #only a single domain
+    ALLOWED_CROSS_DOMAIN_ORIGINS = 'http://example.com'
