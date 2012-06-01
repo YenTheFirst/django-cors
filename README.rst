@@ -17,10 +17,21 @@ Then add the app to the installed apps in your settings file::
         # ...
     )
 
-To allow requests to be made from the browser from any domain, use ``AllowOriginMiddleware``::
+To allow requests to be made from the browser from cross domains, use ``AllowOriginMiddleware``::
 
     MIDDLEWARE_CLASSES = (
         # ...
         'cors.middleware.AllowOriginMiddleware',
         # ...
     )
+
+and then set ALLOWED_CROSS_DOMAIN_ORIGINS::
+
+    #all_origins
+    ALLOWED_CROSS_DOMAIN_ORIGINS = ['*']
+
+    #just two subdomains of example.com
+    ALLOWED_CROSS_DOMAIN_ORIGINS = [
+        'http://subdomain1.example.com',
+        'http://subdomain2.exapmle.com',
+    ]
