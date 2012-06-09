@@ -38,3 +38,7 @@ and then set ALLOWED_CROSS_DOMAIN_ORIGINS::
 
     #only a single domain
     ALLOWED_CROSS_DOMAIN_ORIGINS = 'http://example.com'
+
+cross-domain cookies and credentials can be set with::
+
+    ALLOWED_CROSS_DOMAIN_CREDENTIALS = true

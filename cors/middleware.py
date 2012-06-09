@@ -14,4 +14,6 @@ class AllowOriginMiddleware(object):
                 response['Access-Control-Allow-Origin'] = origin
                 response['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
                 response['Access-Control-Allow-Headers'] = 'Content-Type'
+        if settings.ALLOWED_CROSS_DOMAIN_CREDENTIALS:
+            response['Access-Control-Allow-Credentials'] = 'true'
         return response
